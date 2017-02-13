@@ -8,6 +8,7 @@
 
 import UIKit
 import AFNetworking
+import MBProgressHUD
 
 class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -72,4 +73,6 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         //cell.textLabel?.text = title
         return cell
     }
+    
+    
 }
