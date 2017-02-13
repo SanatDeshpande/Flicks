@@ -1,17 +1,17 @@
-# Project 1 - *Name of App Here*
+# Project 1 - Flicks
 
-**Name of your app** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**Flicks** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **X** hours spent in total
+Time spent: 10 hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-- [ ] User can view a list of movies currently playing in theaters from The Movie Database.
-- [ ] Poster images are loaded using the UIImageView category in the AFNetworking library.
-- [ ] User sees a loading state while waiting for the movies API.
-- [ ] User can pull to refresh the movie list.
+- [x] User can view a list of movies currently playing in theaters from The Movie Database.
+- [x] Poster images are loaded using the UIImageView category in the AFNetworking library.
+- [x] User sees a loading state while waiting for the movies API.
+- [x] User can pull to refresh the movie list.
 
 The following **optional** features are implemented:
 
@@ -27,8 +27,10 @@ The following **additional** features are implemented:
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. I thought the process of setting up the refresh control and loading data from the api was rather confusing and took a lot of tinkering around to get right. 
+   I'm still not sure I entirely understand what I did, but it seems to work.
+2. The process of setting up the table view is still not entirely clear to me, though I understand the code from the tutorial if I look at it, I'm not sure I have a good understanding
+   of how it works exactly.
 
 ## Video Walkthrough 
 
@@ -40,11 +42,13 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
 
-Describe any challenges encountered while building the app.
+Please refer to the two areas of further discussion above for the main difficulties.
+Also, some Swift syntax still confuses me despite the walkthroughs. Many times I find myself allowing
+Xcode to correct me, not fully understanding the reasoning behind it. 
 
 ## License
 
-    Copyright [yyyy] [name of copyright owner]
+    Copyright 2017 Sanat Deshpande
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
