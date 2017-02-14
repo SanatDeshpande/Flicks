@@ -14,6 +14,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
 
     @IBOutlet weak var tableView: UITableView!
     var movies: [NSDictionary]?
+    var endpoint: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         // Do any additional setup after loading the view.
+        
         
         let refreshControl = UIRefreshControl()
         
@@ -75,7 +77,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     func loadDataFromNetwork(_ refreshControl: UIRefreshControl) {
         
         let apiKey = "a07e22bc18f5cb106bfe4cc1f83ad8ed"
-        let url = URL(string: "https://api.themoviedb.org/3/movie/now_playing?api_key=\(apiKey)")!
+        let url = URL(string: "https://api.themoviedb.org/3/movie/\(endpoint)?api_key=\(apiKey)")!
         let request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10)
         let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
         
@@ -96,6 +98,14 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         task.resume()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let cell = sender as! UITableViewCell
+        let indexPath = tableView.indexPath(for: cell)
+        let movie = movies![indexPath!.row]
+        
+        let detailsViewController = segue.destination as! DetailsViewController
+        detailsViewController.movie = movie
+    }
     
     
 }
